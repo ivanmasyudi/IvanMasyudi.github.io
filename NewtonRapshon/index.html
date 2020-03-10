@@ -13,7 +13,7 @@
         <meta name="description" content="Kumpulan Tugas Komputasi Numerik">
       
       
-        <link rel="canonical" href="https://github.com/ivanmasyudi/DERETMACLAURIN/">
+        <link rel="canonical" href="https://github.com/ivanmasyudi/NewtonRapshon/">
       
       
         <meta name="author" content="Ivan Masyudi">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Tugas 1 MacLaurin - Tugas Kuliah</title>
+        <title>Tugas 2 Newton Raphson - Tugas Kuliah</title>
       
     
     
@@ -116,7 +116,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#deret-maclaurin" tabindex="0" class="md-skip">
+      <a href="#metode-newton-rapshon" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -142,7 +142,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Tugas 1 MacLaurin
+                Tugas 2 Newton Raphson
               
             </span>
           
@@ -287,6 +287,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../DERETMACLAURIN/" title="Tugas 1 MacLaurin" class="md-nav__link">
+      Tugas 1 MacLaurin
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -294,40 +306,50 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Tugas 1 MacLaurin
+        Tugas 2 Newton Raphson
       </label>
     
-    <a href="./" title="Tugas 1 MacLaurin" class="md-nav__link md-nav__link--active">
-      Tugas 1 MacLaurin
+    <a href="./" title="Tugas 2 Newton Raphson" class="md-nav__link md-nav__link--active">
+      Tugas 2 Newton Raphson
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deret-maclaurin" class="md-nav__link">
-    DERET MACLAURIN
+  <a href="#rumus" class="md-nav__link">
+    Rumus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" class="md-nav__link">
+    Menyusun Algoritma dan Pemrograman Newton Rhapson
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#perhitungan-e2x" class="md-nav__link">
-    PERHITUNGAN e^2x
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#listing-program" class="md-nav__link">
-    LISTING PROGRAM
+    Listing Program
   </a>
   
 </li>
@@ -340,18 +362,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../NewtonRapshon/" title="Tugas 2 Newton Raphson" class="md-nav__link">
-      Tugas 2 Newton Raphson
-    </a>
   </li>
 
     
@@ -369,27 +379,35 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deret-maclaurin" class="md-nav__link">
-    DERET MACLAURIN
+  <a href="#rumus" class="md-nav__link">
+    Rumus
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" class="md-nav__link">
+    Menyusun Algoritma dan Pemrograman Newton Rhapson
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#perhitungan-e2x" class="md-nav__link">
-    PERHITUNGAN e^2x
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#listing-program" class="md-nav__link">
-    LISTING PROGRAM
+    Listing Program
   </a>
   
 </li>
@@ -411,99 +429,77 @@
               
                 
                 
-                  <h1>Tugas 1 MacLaurin</h1>
-                
-                <h4 id="deret-maclaurin">DERET MACLAURIN<a class="headerlink" href="#deret-maclaurin" title="Permanent link">&para;</a></h4>
-<p>Deret MacLaurin menyatakan bahwa setiap fungsi rill f(x) yang differentiable x = 0 dapat diuraikan menjadi deret polinomial:
-$$
-f(x) = a0 + a1 x + a2x^2 + a3x^3 + ...
-$$
-dengan
-$$
-a_n = \frac{1}{n!}f^n(0)
-$$</p>
-<p>Dengan f^n(x) menyatakan turunan ke-n dari f(x). Notasi lain : f'(x) menyatakan turunan pertama, turunan f''(x) menyatakan turunan kedua, turunan f'''(x) menyatakan turunan ketiga, dst.</p>
-<p>Contoh:</p>
-<p>Uraikan f(x) = e^x dalam deret MacLaurin.</p>
-<p>Jawab:
-$$
-f(x) = a0 + a1x + a2x^2 + a3x^3 + ...
-$$
-a0, a1, a2, dst akan dicari satu per satu:</p>
-<p><img alt="" src="../Untitled-1.jpg" /></p>
-<p>Dengan demikian : 
-$$
-f(x) = ex = 1 + x + \frac{1}{2!}x^2 + \frac{1}{3!}x^3 +···
-$$</p>
-<h4 id="perhitungan-e2x">PERHITUNGAN e^2x<a class="headerlink" href="#perhitungan-e2x" title="Permanent link">&para;</a></h4>
-<p>Dalam banyak masalah terapan, pilihan basis yang mudah digunakan adalah bilangan irasional <em>e = 2,718281828...</em></p>
-<p>Bilangan ini disebut <strong>basis natural</strong>. Fungsi <em>f</em>(<em>x</em>) = <em>ex</em> disebut sebagai fungsi eksponensial natural. Gambar 7 menunjukkan grafik fungsi ini. Pastikan bahwa dalam melihat fungsi eksponensial <em>f</em>(<em>x</em>) = <em>ex</em>, <em>e</em> adalah konstanta 2,718281828…, sedangkan <em>x</em> adalah variabel.</p>
-<p>f(x) = ex</p>
-<p>f'(x) = ex <img alt="\rightarrow" src="https://s0.wp.com/latex.php?latex=%5Crightarrow&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> f'(0) = 1</p>
-<p>f”(x) = ex <img alt="\rightarrow" src="https://s0.wp.com/latex.php?latex=%5Crightarrow&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> f”(0) = 1</p>
-<p>f”'(x) = ex <img alt="\rightarrow" src="https://s0.wp.com/latex.php?latex=%5Crightarrow&amp;bg=ffffff&amp;fg=666666&amp;s=0" /> f”'(0) = 1</p>
-<p>Untuk bilangan e^2x maka:</p>
-<p><img alt="" src="../e2x.png" /></p>
-<p><img alt="" src="../deret1.png" /></p>
-<p>jadi, kesimpulannya adalah sebagai berikut:</p>
-<p><img alt="" src="../deret2.png" /></p>
-<p><img alt="" src="../deret3.png" /></p>
-<p>ketika nilai x diganti dengan 4 maka hasilnya adalah 296,99.</p>
-<h4 id="listing-program">LISTING PROGRAM<a class="headerlink" href="#listing-program" title="Permanent link">&para;</a></h4>
-<p>Untuk membuat program agar dapat mengekspansi bilangan e^2x dengan nilai x=4 hingga nilai menjadi kurang dari 0,001 bisa dibuat dengan listing program sebagai berikut.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
-<span class="n">x</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">hasil</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">a</span><span class="o">=</span> <span class="mi">0</span>
-<span class="n">b</span><span class="o">=</span><span class="mi">1</span>
-<span class="n">iterasi</span> <span class="o">=</span> <span class="mi">1</span>
+                <h1 id="metode-newton-rapshon">Metode Newton Rapshon<a class="headerlink" href="#metode-newton-rapshon" title="Permanent link">&para;</a></h1>
+<p>Metode Newtown Rapshon adalah pencarian root yang menggunakan pendekatan linier. Secara khusus, kami menebak solusi <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span> dari persamaan <span><span class="MathJax_Preview">f(x)=0</span><script type="math/tex">f(x)=0</script></span>, menghitung perkiraan linier dari <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> pada  <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span>  dan kemudian menemukan <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> -intercept dari pendekatan linier .</p>
+<h2 id="rumus">Rumus<a class="headerlink" href="#rumus" title="Permanent link">&para;</a></h2>
+<p>Biarkan <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> menjadi fungsi yang dapat dibedakan. Jika <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span> mendekati solusi <span><span class="MathJax_Preview">f(x)=0</span><script type="math/tex">f(x)=0</script></span> maka kita dapat memperkirakan <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> dengan garis singgung pada <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span> dan menghitung <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> -terima dari garis singgung. Persamaan garis singgung pada <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span> adalah</p>
+<p><span><span class="MathJax_Preview">y=f′(x_0)(x−x_0)+f(x_0)</span><script type="math/tex">y=f′(x_0)(x−x_0)+f(x_0)</script></span></p>
+<p><span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> -intercept adalah solusi <span><span class="MathJax_Preview">x_1</span><script type="math/tex">x_1</script></span> dari persamaan</p>
+<p><span><span class="MathJax_Preview">0=f′(x_0)(x_1−x_0)+f(x_0)</span><script type="math/tex">0=f′(x_0)(x_1−x_0)+f(x_0)</script></span></p>
+<p>dan kami menyelesaikannya dengan <span><span class="MathJax_Preview">x_1</span><script type="math/tex">x_1</script></span></p>
+<p><span><span class="MathJax_Preview">x1=x0− \frac{f(x_0)}{f′(x_0)}</span><script type="math/tex">x1=x0− \frac{f(x_0)}{f′(x_0)}</script></span></p>
+<p>Jika kami menerapkan prosedur ini berulang kali, maka kami memperoleh urutan yang diberikan oleh rumus rekursif</p>
+<p><span><span class="MathJax_Preview">xn+1=xn− \frac{f(x_n)}{f′(x_n)}</span><script type="math/tex">xn+1=xn− \frac{f(x_n)}{f′(x_n)}</script></span></p>
+<p>yang (berpotensi) konvergen ke solusi persamaan <span><span class="MathJax_Preview">f(x)=0</span><script type="math/tex">f(x)=0</script></span>.</p>
+<h3 id="menyusun-algoritma-dan-pemrograman-newton-rhapson"><strong>Menyusun Algoritma dan Pemrograman Newton Rhapson</strong><a class="headerlink" href="#menyusun-algoritma-dan-pemrograman-newton-rhapson" title="Permanent link">&para;</a></h3>
+<p>dari rumus yang kita dapat diatas kita dapat menyusun sebuah algoritma yang nantinya akan dibuat menjadi sebuah program. Algoritma menyusun akar - akar <span><span class="MathJax_Preview">f(x) = 0</span><script type="math/tex">f(x) = 0</script></span> sebagai berikut :</p>
+<ol>
+<li>Didefinisikan fungsi <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> dengan <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> dan <span><span class="MathJax_Preview">f'(x)</span><script type="math/tex">f'(x)</script></span></li>
+<li>Ditentukan Epsilon sebagai Toleransi kesalahan serta iterasi maksimum untuk <em>Stopping Condition</em></li>
+<li>Dipilih tebakan awal <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span></li>
+<li>Dihitung <span><span class="MathJax_Preview">f(x_0)</span><script type="math/tex">f(x_0)</script></span> dan <span><span class="MathJax_Preview">f'(x_0)</span><script type="math/tex">f'(x_0)</script></span></li>
+<li>Dihitung <span><span class="MathJax_Preview">x_b = x_0 - \frac{f(x_0)}{f'(x_0)}f'(x_0) \neq 0</span><script type="math/tex">x_b = x_0 - \frac{f(x_0)}{f'(x_0)}f'(x_0) \neq 0</script></span> . jika <span><span class="MathJax_Preview">f'(x_0) = 0</span><script type="math/tex">f'(x_0) = 0</script></span> kembali ke langkah - 3</li>
+<li>Jika <span><span class="MathJax_Preview">\left | x_b - x_0 \right | &lt; \varepsilon</span><script type="math/tex">\left | x_b - x_0 \right | < \varepsilon</script></span> . itersasi lebih dari iterasi maksimum tulis <span><span class="MathJax_Preview">x_{hampiran} = x_b</span><script type="math/tex">x_{hampiran} = x_b</script></span> sebagai hasil hampiran akar; jika tidak, lanjutkan ke langkah berikutnya.</li>
+<li>Ganti nilai <span><span class="MathJax_Preview">x_0</span><script type="math/tex">x_0</script></span> dengan <span><span class="MathJax_Preview">x_0 = x_b</span><script type="math/tex">x_0 = x_b</script></span> dan kembali ke langkah-4</li>
+</ol>
+<h2 id="listing-program">Listing Program<a class="headerlink" href="#listing-program" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="c1">#Program python untuk memperkirakan akar polinomial</span>
 
-<span class="k">while</span> <span class="n">hasil</span><span class="o">&gt;</span><span class="mf">0.001</span><span class="p">:</span>
-    <span class="n">f_x</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">f_y</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-        <span class="n">f_x</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="p">))</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">i</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1">#menggunakan metode newton-raphson</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="c1">#f(x) -  fungsi polynomial </span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">function</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">function</span>
 
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
-        <span class="n">f_y</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">j</span><span class="p">))</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">j</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-    <span class="n">hasil</span> <span class="o">=</span> <span class="n">f_y</span><span class="o">-</span><span class="n">f_x</span>
-    <span class="n">a</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="n">b</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iterasi ke-&quot;</span><span class="p">,</span><span class="n">iterasi</span><span class="p">,</span><span class="s2">&quot;= &quot;</span><span class="p">,</span><span class="n">hasil</span><span class="p">)</span>
-    <span class="n">iterasi</span><span class="o">+=</span><span class="mi">1</span>
+<span class="k">def</span> <span class="nf">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="c1">#berfungsi untuk menemukan turunan dari polinomial</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">0.000001</span>
+    <span class="n">derivative</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+    <span class="k">return</span> <span class="n">derivative</span>
+
+<span class="k">def</span> <span class="nf">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">derivative</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+
+
+<span class="c1"># p - titik awal mis. nilai lebih dekat ke root</span>
+<span class="c1"># n - jmulah iterasi</span>
+
+<span class="k">def</span> <span class="nf">iterate</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Banyak Iterasinya =&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">p</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iterasi ke-&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>         
+    <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">iterate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="c1">#cetakan akar polinomial x ^ 3 - 2x - 1 menggunakan 3 iterasi dan ambil titik awal sebagai 1</span>
 </code></pre></div>
 
-<p>Output:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">1</span> <span class="o">=</span>  <span class="mf">1.0</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">2</span> <span class="o">=</span>  <span class="mf">8.0</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">3</span> <span class="o">=</span>  <span class="mf">32.0</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">4</span> <span class="o">=</span>  <span class="mf">85.33333333333333</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">5</span> <span class="o">=</span>  <span class="mf">170.66666666666669</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">6</span> <span class="o">=</span>  <span class="mf">273.0666666666666</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">7</span> <span class="o">=</span>  <span class="mf">364.08888888888896</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">8</span> <span class="o">=</span>  <span class="mf">416.1015873015872</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">9</span> <span class="o">=</span>  <span class="mf">416.1015873015872</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">10</span> <span class="o">=</span>  <span class="mf">369.8680776014112</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">11</span> <span class="o">=</span>  <span class="mf">295.89446208112895</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">12</span> <span class="o">=</span>  <span class="mf">215.195972422639</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">13</span> <span class="o">=</span>  <span class="mf">143.46398161509296</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">14</span> <span class="o">=</span>  <span class="mf">88.28552714774924</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">15</span> <span class="o">=</span>  <span class="mf">50.448872655856576</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">16</span> <span class="o">=</span>  <span class="mf">26.90606541645684</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">17</span> <span class="o">=</span>  <span class="mf">13.45303270822842</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">18</span> <span class="o">=</span>  <span class="mf">6.330838921519444</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">19</span> <span class="o">=</span>  <span class="mf">2.8137061873417224</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">20</span> <span class="o">=</span>  <span class="mf">1.184718394670199</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">21</span> <span class="o">=</span>  <span class="mf">0.47388735786807956</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">22</span> <span class="o">=</span>  <span class="mf">0.18052851728316455</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">23</span> <span class="o">=</span>  <span class="mf">0.06564673355751438</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">24</span> <span class="o">=</span>  <span class="mf">0.022833646454728296</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">25</span> <span class="o">=</span>  <span class="mf">0.0076112154847578495</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">26</span> <span class="o">=</span>  <span class="mf">0.0024355889549951826</span>
-<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">27</span> <span class="o">=</span>  <span class="mf">0.0007494119863622473</span>
+<p>Output</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Banyak</span> <span class="n">Iterasinya</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">0</span> <span class="o">=</span> <span class="mf">2.999994000093219</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">1</span> <span class="o">=</span> <span class="mf">2.199996832141079</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">2</span> <span class="o">=</span> <span class="mf">1.7808294919560141</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">1.6363030634057565</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">4</span> <span class="o">=</span> <span class="mf">1.618304588651506</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">5</span> <span class="o">=</span> <span class="mf">1.6180340496697716</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">6</span> <span class="o">=</span> <span class="mf">1.6180339887499484</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">7</span> <span class="o">=</span> <span class="mf">1.6180339887498947</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">8</span> <span class="o">=</span> <span class="mf">1.618033988749895</span>
+<span class="n">iterasi</span> <span class="n">ke</span><span class="o">-</span> <span class="mi">9</span> <span class="o">=</span> <span class="mf">1.618033988749895</span>
 </code></pre></div>
 
-<p>Sekian dan terima kasih semoga bermanfaat.</p>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
 tex2jax: {inlineMath: [['$$','$$']]}
@@ -511,7 +507,6 @@ tex2jax: {inlineMath: [['$$','$$']]}
 </script>
 
 <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-
 </script>
                 
                   
@@ -534,7 +529,7 @@ tex2jax: {inlineMath: [['$$','$$']]}
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Beranda" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../DERETMACLAURIN/" title="Tugas 1 MacLaurin" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -543,25 +538,11 @@ tex2jax: {inlineMath: [['$$','$$']]}
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Beranda
+                Tugas 1 MacLaurin
               </span>
             </div>
           </a>
         
-        
-          <a href="../NewtonRapshon/" title="Tugas 2 Newton Raphson" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Tugas 2 Newton Raphson
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
